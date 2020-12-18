@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+</head>
+<style>
+    @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {height: 20000px; font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';}
+
+        .scroll {
+        position: fixed; right: 10px; top: 10px;
+        width: 50px; height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #fff;
+        background: rgba(0,0,0,0.5);
+        z-index: 1000000;
+        }
+
+        /* common */
+        .fixed {
+            position: fixed; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+
+        img {width: 100%; vertical-align: top;}
+
+        /* section1 */
+        .s1Txt01 {
+            font-size: 8vw;
+        }
+
+        .s1Txt02 {
+            font-size: 8vw;
+            white-space: nowrap;
+        }
+
+        .s1Txt03 {
+            width: 0%;
+            height: 0%;
+            z-index: 900;
+        }
+        .s1Txt04 {
+            width: 30vw;
+            height: 30vw;
+            background: #000;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 4vw;
+        }
+        .s1Txt05 {
+            color: #fff;
+            font-size: 4vw;
+        }
+
+        /* section2 */
+        .s2Txt01 {
+            width: 100vw; height: 100vh;
+            background: #000;
+        }
+        .s2Txt02 h2 {
+            color: #fff;
+            font-size: 4vw;
+            text-align: center;
+            line-height: 1.5;
+            background-repeat: no-repeat;
+            background-image: url(img/text-bg.jpg);
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-transform: capitalize;
+            white-space: nowrap;
+        }
+        .s2Txt03 {
+            color: #fff;
+        }
+        .s2Txt03 .box {
+            top: 30%;
+            display: flex;
+        }
+        .s2Txt03 h3 {
+            flex: 1 1 30%;
+            top: 30%;
+            font-size: 1.5vw;
+            line-height: 1.5;
+        }
+        .s2Txt03 p {
+            flex: 1 1 70%;
+            top: 30%;
+            font-size: 0.95vw;
+            line-height: 1.5;
+        }
+
+        .s2Txt04 {
+            width: 60vw;
+            height: 60vh;
+            background: url(img/apple-pad-mockup.png) no-repeat;
+            background-size: cover;
+            background-position: center top;
+            top: 70%;
+            overflow: hidden;
+        }
+        .s2Txt04 .img1 {
+            margin: 30px;
+        }
+        .s2Txt04 .img1 img {
+            border-radius: 30px 30px 0 0;
+        }
+
+        /* .img1 {
+            width: 60vw;
+            height: 60vh;
+            top: 70%;
+            margin-top: 30px;
+        }
+        .img1 img {
+            border-radius: 30px 30px 0 0;
+        } */
+        .s2Txt04 .img2 {
+            width: 60vw;
+            height: 60vh;
+            margin: 30px;
+        }
+        .s2Txt04 .img2 img {
+            border-radius: 30px 30px 0 0;
+        }
+</style>
+<body>
+    <div class="scroll">0</div>
+    <div id="contents">
+        <!-- 0에서 500이 될 때 opacity를 준다. -->
+        <section id="section1"
+            data-0= "display:block"
+            data-7999 = "display:none"
+        >
+            <div class="s1Txt01 fixed" 
+                data-0 = "top: 50%; opacity:1" 
+                data-500 = "top: 30%; opacity:0">안녕하세요!
+            </div>
+            <div class="s1Txt02 fixed" 
+                data-300 = "top: 70%; opacity:0" 
+                data-800 = "top: 50%; opacity:1; font-size: 8vw;" 
+                data-1700 = "top: 50%; opacity:1; font-size: 0vw; ">프론트앤드 개발자입니다.
+            </div>
+            <div class="s1Txt03 fixed" 
+                data-1600 = "width: 0%; height: 0%;" 
+                data-3000 = "width: 100%; height: 100%;"> 
+                <img src="img/me.jpg" alt="이미지" class="fixed"
+                    data-1600 = "border-radius: 500px" 
+                    data-3000 = "border-radius: 0px"
+                >
+            </div>
+            <div class="s1Txt04 fixed" data-title="검은색 원"
+                data-2300 = "width: 0vw; height: 0vw" 
+                data-3300 = "width: 30vw; height: 30vw"
+                data-5000 = "width: 30vw; height: 30vw"
+                data-7600 = "width: 230vw; height: 230vw"
+            >
+                <span class="s1Txt05 fixed"
+                    data-2800 = "transform: translate(-50%, -50%) scale(0) rotate(-360deg)"
+                    data-4300 = "transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+                    data-5000 = "transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+                    data-7000 = "transform: translate(-50%, -50%) scale(0) rotate(0deg)"
+                >
+                Hello!</span>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2"
+            data-7899="display:none"
+            data-7900="display:block"
+            data-17000="display:block"
+            data-17001="display:none"
+        >
+            <div class="s2Txt01 fixed" data-title="검은색 배경"></div>
+            <div class="s2Txt02">
+                <h2 class="fixed" 
+                    data-7900 = "opacity:0;"
+                    data-8000 = "opacity:1;"
+                    data-8200 = "opacity:1; top: 50%"
+                    data-8800 = "opacity:1; top: 14%"
+                >I've been working on Sites </h2>
+
+                <div class="s2Txt03">
+                    <div class="fixed box"
+                        data-10000 = "top: 50%; opacity:0"
+                        data-10300 = "top: 40%; opacity:0"
+                        data-10500 = "top: 30%; opacity:1"
+                    >
+                        <h3 class>웹표준을 준수한<br> 웹표준사이트 제작</h3>
+                        <p>웹표준을 준수하여 코딩한 사이트입니다. 모든 사용자가 웹사이트 이용에 불편이 없도록 인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성 등의 웹 접근성을 준수하였고, W3C 검사를 완료하여 웹 호환성을 확인하였습니다.</p>
+                    </div>
+                    <!-- <div class="fixed box"
+                        data-10000 = "top: 50%; opacity:0"
+                        data-10200 = "top: 40%; opacity:0"
+                        data-10400 = "top: 30%; opacity:1"
+                    >
+                        <h3>반응형 사이트</h3>
+                        <p>모든 디바이스 환경에 따라 사이트를 최적화시켜 사이트를 제작하였습니다.</p>
+                    </div>
+                    <div class="fixed box"
+                        data-10000 = "top: 50%; opacity:0"
+                        data-10200 = "top: 40%; opacity:0"
+                        data-10400 = "top: 30%; opacity:1"
+                    >
+                        <h3>기업사이트</h3>
+                        <p>기업에서 가장 많이 사용하는 스타일의 사이트를 제작하였습니다.</p>
+                    </div>
+                    <div class="fixed box"
+                        data-10000 = "top: 50%; opacity:0"
+                        data-10200 = "top: 40%; opacity:0"
+                        data-10400 = "top: 30%; opacity:1"
+                        >
+                        <h3>리액트 사이트</h3>
+                        <p>React를 이용하여 포트폴리오 사이트를 제작하였습니다.</p>
+                    </div> -->
+                </div>
+
+                <div class="s2Txt04 fixed" 
+                    data-8800 = "top: 150%;" 
+                    data-10000 = "top: 70%;"
+                > 
+                    <div class="img1"
+                        data-8800 = "top: 150%;" 
+                        data-10000 = "top: 70%;"
+                    ><img src="img/apple-site01.jpg" alt="웹표준 사이트 이미지">
+                    </div>
+                    <div class="img2 fixed"
+                        data-10600 = "top: 70%; left: 150%;" 
+                        data-11000 = "top: 70%; left: 50%;"
+                        ><img src="img/apple-site02.jpg" alt="반응형 사이트 이미지"
+                    ></div>
+                    <!-- <div class="img3"
+                        data-8800 = "top: 150%;" 
+                        data-10000 = "top: 70%;"
+                        ><img src="img/apple-site03.jpg" alt="메가박스 사이트 이미지"
+                    ></div> -->
+                    <!-- <div class="img4"
+                        data-8800 = "top: 150%;" 
+                        data-10000 = "top: 70%;"
+                        ><img src="img/apple-site04.jpg" alt="포트폴리오 사이트 이미지"
+                    ></div> -->
+                </div>
+                
+                <!-- <div class="img2 fixed"
+                    data-10600 = "top: 70%; left: 150%;" 
+                    data-11000 = "top: 70%; left: 50%;"
+                    ><img src="img/apple-site02.jpg" alt="반응형 사이트 이미지"
+                ></div> -->
+            </div>
+        </section>
+        <!-- //section2 -->
+        <section id="section3"></section>
+        <!-- //section3 -->
+        <section id="section4"></section>
+        <!-- //section4 -->
+        <section id="section5"></section>
+        <!-- //section5 -->
+        <section id="section6"></section>
+        <!-- //section6 -->
+    </div>
+
+    <!-- script -->
+    <script src="../jquery/jquery.min_1.1.24.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init();
+
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+            $(".scroll").text(scrollTop);
+        });
+    </script>
+</body>
+</html>
